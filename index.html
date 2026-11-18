@@ -1,74 +1,222 @@
 <!doctype html>
+<!-- Template: tools/privacy/build_policy.py fills the {{...}} markers. Edit wording here, not in granny_pp. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy - Scamming Granny: Call Center Chaos</title>
-<meta name="description" content="Privacy policy for the game Scamming Granny: Call Center Chaos by madaxe.">
+<title>Privacy Policy | Scamming Granny by MadAxe Studios</title>
+<meta name="description" content="How Scamming Granny: Call Center Chaos by MadAxe Studios handles your data.">
+<meta property="og:title" content="Privacy Policy | Scamming Granny: Call Center Chaos">
+<meta property="og:description" content="How Scamming Granny by MadAxe Studios handles your data.">
+<meta property="og:image" content="https://madaxe05.github.io/granny_pp/assets/og.jpg">
+<meta name="theme-color" content="#14504f">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <style>
   :root {
-    --bg: #f6f3ec; --surface: #fffdf8; --ink: #2b2926; --soft: #5c5850;
-    --teal: #1f7a78; --edge: #ddd6c8;
+    --bg: #f4efe4; --surface: #fffcf5; --surface-2: #ece5d6; --ink: #24221f; --soft: #5a554c;
+    --teal: #1b6f6d; --teal-deep: #14504f; --gold: #b8860b; --edge: #ddd3c0;
+    --shadow: 0 1px 2px rgba(20, 48, 47, .06), 0 8px 24px rgba(20, 48, 47, .08);
+    --radius: 14px;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #161817; --surface: #1f2221; --ink: #ece8e0; --soft: #b3ada2; --teal: #5cc2bf; --edge: #34383a; }
+    :root {
+      --bg: #121514; --surface: #1b1f1e; --surface-2: #232827; --ink: #eee9df; --soft: #b4ada0;
+      --teal: #5fc4c0; --teal-deep: #0e3b3a; --gold: #e2b23c; --edge: #303634;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-  header { border-bottom: 1px solid var(--edge); padding-bottom: 16px; margin-bottom: 24px; }
-  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 4px; }
-  h2 { font-size: 1.2rem; margin: 32px 0 8px; color: var(--teal); }
-  h3 { font-size: 1rem; margin: 20px 0 4px; }
-  p, li { color: var(--ink); }
-  .meta { color: var(--soft); margin: 0; }
-  .card { background: var(--surface); border: 1px solid var(--edge); border-radius: 10px; padding: 16px 20px; margin: 16px 0; }
-  ul { padding-left: 20px; }
-  a { color: var(--teal); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
-  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--edge); }
-  th { color: var(--soft); font-weight: 600; }
-  .table-wrap { overflow-x: auto; }
-  footer { margin-top: 40px; color: var(--soft); font-size: 0.9rem; }
+  a { color: var(--teal); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+
+  /* Top bar */
+  .bar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--teal-deep) 94%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #f6f1e6; }
+  .bar-in { max-width: 1080px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 12px; }
+  .bar img { width: 40px; height: 40px; border-radius: 50%; }
+  .bar .studio { font-weight: 700; letter-spacing: .2px; }
+  .bar .studio small { display: block; font-weight: 500; opacity: .75; font-size: .78rem; letter-spacing: .3px; }
+  .bar .mail { margin-left: auto; color: #f6f1e6; text-decoration: none; font-size: .9rem; font-weight: 600;
+    border: 1px solid rgba(246, 241, 230, .35); padding: 8px 14px; border-radius: 999px; white-space: nowrap; }
+  .bar .mail:hover { background: rgba(246, 241, 230, .12); }
+
+  /* Hero */
+  .hero { max-width: 1080px; margin: 24px auto 0; padding: 0 16px; }
+  .hero-card { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+    background: var(--teal-deep); }
+  .hero-card img { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 500; object-fit: cover; }
+  .hero-text { padding: 24px 4px 4px; }
+  .eyebrow { color: var(--teal); font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; }
+  h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.02em; }
+  .lead { font-size: 1.1rem; color: var(--soft); max-width: 62ch; margin: 0 0 16px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { background: var(--surface); border: 1px solid var(--edge); border-radius: 999px; padding: 6px 12px; font-size: .88rem; color: var(--soft); }
+  .chips strong { color: var(--ink); }
+
+  /* At a glance */
+  .glance { max-width: 1080px; margin: 32px auto 0; padding: 0 16px; display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .g { background: var(--surface); border: 1px solid var(--edge); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+  .g .ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--surface-2); margin-bottom: 10px; }
+  .g svg { width: 22px; height: 22px; stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .g h3 { margin: 0 0 4px; font-size: 1.02rem; }
+  .g p { margin: 0; color: var(--soft); font-size: .94rem; }
+
+  /* Layout */
+  .layout { max-width: 1080px; margin: 32px auto 0; padding: 0 16px 48px; display: grid; gap: 32px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .layout { grid-template-columns: 240px 1fr; } }
+  .layout > *, .glance > * { min-width: 0; }
+  td { overflow-wrap: anywhere; }
+  nav.toc { align-self: start; }
+  @media (min-width: 900px) { nav.toc { position: sticky; top: 84px; } }
+  .toc details { background: var(--surface); border: 1px solid var(--edge); border-radius: var(--radius); padding: 12px 14px; }
+  .toc summary { cursor: pointer; font-weight: 700; list-style: none; }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc ol { margin: 10px 0 0; padding-left: 20px; font-size: .92rem; }
+  .toc li { margin: 4px 0; }
+  .toc a { color: var(--soft); text-decoration: none; }
+  .toc a:hover { color: var(--teal); }
+
+  article section { background: var(--surface); border: 1px solid var(--edge); border-radius: var(--radius);
+    padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+  article h2 { font-size: 1.3rem; margin: 0 0 10px; letter-spacing: -.01em; display: flex; align-items: baseline; gap: 10px; }
+  article h2 .n { color: var(--gold); font-size: .95rem; font-weight: 800; min-width: 1.6em; }
+  article p { margin: 0 0 12px; }
+  article p:last-child { margin-bottom: 0; }
+  article ul { margin: 0; padding-left: 20px; }
+  article li { margin: 6px 0; }
+  .note { background: var(--surface-2); border-left: 4px solid var(--gold); border-radius: 10px; padding: 14px 16px; margin-top: 12px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: .94rem; margin: 6px 0 12px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 10px; border-bottom: 1px solid var(--edge); }
+  th { color: var(--soft); font-weight: 700; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; }
+  td:first-child { font-weight: 700; width: 22%; }
+  @media (max-width: 700px) {
+    thead { display: none; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr { border: 1px solid var(--edge); border-radius: 12px; padding: 6px 12px; margin-bottom: 10px; background: var(--bg); }
+    td { border: 0; padding: 6px 0; }
+    td:first-child { width: 100%; font-size: 1rem; color: var(--teal); }
+    td:nth-child(2)::before { content: "What it collects"; }
+    td:nth-child(3)::before { content: "Why"; }
+    td:nth-child(2)::before, td:nth-child(3)::before { display: block; font-size: .75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em; color: var(--soft); }
+  }
+
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .contact img { width: 72px; height: 72px; border-radius: 50%; }
+  .btn { display: inline-block; background: var(--teal); color: #fffcf5; text-decoration: none; font-weight: 700;
+    padding: 12px 20px; border-radius: 999px; }
+  @media (prefers-color-scheme: dark) { .btn { color: #0e1312; } }
+  .btn:hover { filter: brightness(1.08); }
+
+  footer { border-top: 1px solid var(--edge); padding: 24px 16px 40px; text-align: center; color: var(--soft); font-size: .9rem; }
 </style>
 </head>
 <body>
-<main>
-<header>
-  <h1>Privacy Policy</h1>
-  <p class="meta">Scamming Granny: Call Center Chaos (Android app <code>com.madaxe.sohan.granny</code>)</p>
-  <p class="meta">Developer: madaxe. Effective date: 18 November 2026.</p>
+
+<header class="bar">
+  <div class="bar-in">
+    <img src="assets/studio_logo.webp" alt="MadAxe Studios logo" width="40" height="40">
+    <div class="studio">MadAxe Studios<small>Scamming Granny: Call Center Chaos</small></div>
+    <a class="mail" href="mailto:dhungel9814@gmail.com">Contact us</a>
+  </div>
 </header>
 
-<div class="card">
-  <p><strong>The short version.</strong> Scamming Granny is a comedy parody game. Every company, person and verification code in it is fictional. You do not need an account and the game never asks for your name, email, phone number or payment details. What you type or say on in-game calls stays on your phone. We use Google services for game analytics, crash reports, settings updates, optional notifications and ads, and those services collect device and usage data as described below.</p>
+<div class="hero">
+  <div class="hero-card">
+    <img src="assets/hero.webp" alt="Scamming Granny: Call Center Chaos key art: a sweating call-center worker on the phone with a stern granny on his monitor" width="1024" height="500">
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Your data, in plain words</h1>
+    <p class="lead">Scamming Granny is a comedy parody game. You play without an account, what you say on in-game calls stays on your phone, and the few things we do collect are listed below.</p>
+    <ul class="chips">
+      <li>Effective date: <strong>18 November 2026</strong></li>
+      <li>Studio: <strong>MadAxe Studios</strong></li>
+      <li>Developer: <strong>madaxe</strong></li>
+      <li>Android app: <strong>com.madaxe.sohan.granny</strong></li>
+    </ul>
+  </div>
 </div>
 
-<h2>1. Who we are</h2>
-<p>This game is made by madaxe ("we", "us"). If you have any question about this policy or your data, email <a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a>.</p>
+<div class="glance" aria-label="At a glance">
+  <div class="g">
+    <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/><path d="M3 3l18 18"/></svg></div>
+    <h3>No account needed</h3>
+    <p>We never ask for your name, email, phone number or payment details.</p>
+  </div>
+  <div class="g">
+    <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+    <h3>Calls stay on your phone</h3>
+    <p>What you type or say to the grannies is never sent to us.</p>
+  </div>
+  <div class="g">
+    <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+    <h3>Analytics and crash reports</h3>
+    <p>Google Firebase tells us how the game plays and when it crashes.</p>
+  </div>
+  <div class="g">
+    <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <h3>Your choices respected</h3>
+    <p>Ad consent where the law requires it, and you can delete your data any time.</p>
+  </div>
+</div>
 
-<h2>2. Information that stays on your device</h2>
-<ul>
-  <li><strong>Save game and settings.</strong> Your progress, money, upgrades and settings (sound, motion, vibration, reminders) are stored only on your device. Uninstalling the game deletes them.</li>
-  <li><strong>What you type on calls.</strong> Lines you type to the in-game characters are processed by the game on your device. We do not send them to any server and we do not include them in analytics or crash reports.</li>
-  <li><strong>Microphone (optional).</strong> If you tap <em>Mic</em> on a call, the game asks for microphone permission and uses your phone's built-in Android speech recognition to turn your voice into text. The game does not record or store audio. Speech recognition is provided by your device's speech service (usually Google), which may process the audio under its own privacy policy. You can deny or revoke the permission at any time and keep playing by typing.</li>
-  <li><strong>Photos (optional).</strong> The in-game Webcam app can save a picture of your in-game character to your phone's gallery. It does not use your real camera. Saved pictures stay on your device.</li>
-  <li><strong>Daily reminders (optional).</strong> Reminder notifications are scheduled on your device. You can turn them off in the game's Settings or in your phone's notification settings.</li>
-</ul>
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <details open>
+      <summary>Contents</summary>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#device">What stays on your device</a></li>
+        <li><a href="#services">Third-party services</a></li>
+        <li><a href="#ads">Ads and your choices</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#retention">How long data is kept</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#content">About the game's content</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </details>
+  </nav>
 
-<h2>3. Information collected by third-party services</h2>
-<p>The game uses the following Google services. They automatically collect some information from your device when you play. We do not sell this information.</p>
+  <article>
+    <section id="who">
+      <h2><span class="n">01</span>Who we are</h2>
+      <p>Scamming Granny: Call Center Chaos is made by <strong>MadAxe Studios</strong> (developer: madaxe), referred to as "we" or "us". For any question about this policy or your data, email <a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a>.</p>
+    </section>
 
-<div class="table-wrap">
-<table>
-  <thead><tr><th>Service</th><th>What it collects</th><th>Why we use it</th></tr></thead>
-  <tbody>
+    <section id="device">
+      <h2><span class="n">02</span>What stays on your device</h2>
+      <ul>
+        <li><strong>Save game and settings.</strong> Your progress, money, upgrades and settings (sound, motion, vibration, reminders) are stored only on your device. Uninstalling the game deletes them.</li>
+        <li><strong>What you type on calls.</strong> Lines you type to the in-game characters are processed by the game on your device. We do not send them to any server and we do not include them in analytics or crash reports.</li>
+        <li><strong>Microphone (optional).</strong> If you tap <em>Mic</em> on a call, the game asks for microphone permission and uses your phone's built-in Android speech recognition to turn your voice into text. The game does not record or store audio. Speech recognition is provided by your device's speech service (usually Google), which may process the audio under its own privacy policy. You can deny or revoke the permission at any time and keep playing by typing.</li>
+        <li><strong>Photos (optional).</strong> The in-game Webcam app can save a picture of your in-game character to your phone's gallery. It does not use your real camera. Saved pictures stay on your device.</li>
+        <li><strong>Daily reminders (optional).</strong> Reminder notifications are scheduled on your device. You can turn them off in the game's Settings or in your phone's notification settings.</li>
+      </ul>
+    </section>
+
+    <section id="services">
+      <h2><span class="n">03</span>Third-party services</h2>
+      <p>The game uses the Google services below. They automatically collect some information from your device while you play. We do not sell this information.</p>
+      <table>
+        <thead><tr><th>Service</th><th>What it collects</th><th>Why we use it</th></tr></thead>
+        <tbody>
     <tr>
       <td>Google Analytics for Firebase</td>
-      <td>App instance ID, device model, OS version, app version, language, country/region (derived from IP address), session times, and gameplay events such as nights started and finished, calls won or lost, missions, mini-games, level reached and in-game purchases made with in-game money. No names, no typed or spoken text.</td>
+      <td>App instance ID, device model, OS version, app version, language, country/region (derived from IP address), session times, and gameplay events (ad load failed, ad reward fallback, ad rewarded, ad show failed, ad shown, ad skipped, call completed, level end, level start, level up, mission complete, mission start, office event end, office event start, paper game won, push opened, review requested, settings changed, spend virtual currency, street purchase, zone enter). No names, no typed or spoken text.</td>
       <td>To understand which parts of the game are played, where players get stuck, and to improve balance and content.</td>
     </tr>
     <tr>
@@ -96,50 +244,79 @@
       <td>Handled by Google Play; we do not receive your review details through the game.</td>
       <td>To let you rate the game without leaving it.</td>
     </tr>
-  </tbody>
-</table>
-</div>
+        </tbody>
+      </table>
+      <p>Google's handling of this data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+    </section>
 
-<p>Google's handling of this data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
 
-<h2>4. Ads and your choices</h2>
-<ul>
-  <li><strong>Where ads appear.</strong> Ads are shown at natural breaks (for example after a call result or at the end of a night, and when you open or return to the game). Rewarded ads are always optional: you choose to watch one in exchange for an in-game bonus.</li>
-  <li><strong>Consent.</strong> If you are in the European Economic Area, the United Kingdom, Switzerland, or another region where consent is required, the game shows Google's consent form before personalized ads are used. You can change your choice at any time from <em>Settings &gt; Privacy and ad choices</em> in the game.</li>
-  <li><strong>Personalized ads.</strong> You can also reset your advertising ID or opt out of ads personalization in your Android settings (Settings &gt; Google &gt; Ads, or Settings &gt; Privacy &gt; Ads, depending on your device).</li>
-</ul>
+    <section id="ads">
+      <h2><span class="n">04</span>Ads and your choices</h2>
+      <ul>
+        <li><strong>Where ads appear.</strong> Ads are shown at natural breaks, for example after a call result, at the end of a night, and when you open or return to the game. Rewarded ads are always optional: you choose to watch one in exchange for an in-game bonus.</li>
+        <li><strong>Consent.</strong> If you are in the European Economic Area, the United Kingdom, Switzerland, or another region where consent is required, the game shows Google's consent form before personalized ads are used. You can change your choice at any time from <em>Settings &gt; Privacy and ad choices</em> in the game.</li>
+        <li><strong>Personalized ads.</strong> You can also reset your advertising ID or opt out of ads personalization in your Android settings (Settings &gt; Google &gt; Ads, or Settings &gt; Privacy &gt; Ads, depending on your device).</li>
+      </ul>
+    </section>
 
-<h2>5. Permissions the app may ask for</h2>
-<ul>
+
+    <section id="permissions">
+      <h2><span class="n">05</span>Permissions the app may ask for</h2>
+      <ul>
   <li><strong>Internet / network state:</strong> for analytics, crash reports, settings updates and ads.</li>
   <li><strong>Notifications:</strong> for optional reminders and game news.</li>
+  <li><strong>Run at startup:</strong> only to keep your daily reminder scheduled after the phone restarts.</li>
   <li><strong>Microphone:</strong> only if you use voice on calls (see section 2).</li>
   <li><strong>Storage (Android 9 and older only):</strong> only to save an in-game picture to your gallery.</li>
   <li><strong>Advertising ID:</strong> used by the ads service as described in section 4.</li>
-</ul>
+      </ul>
+    </section>
 
-<h2>6. How long data is kept</h2>
-<p>Data on your device stays until you delete the game or clear its data. Data held by Google services is kept according to their retention settings: for example, Google Analytics event data is kept for up to 14 months, and Crashlytics crash reports for up to 90 days.</p>
+    <section id="retention">
+      <h2><span class="n">06</span>How long data is kept</h2>
+      <p>Data on your device stays until you delete the game or clear its data. Data held by Google services is kept according to their retention settings: for example, Google Analytics event data is kept for up to 14 months, and Crashlytics crash reports for up to 90 days.</p>
+    </section>
 
-<h2>7. Your rights and deleting your data</h2>
-<p>Depending on where you live (for example under the GDPR in Europe or the CCPA/CPRA in California), you may have the right to access, correct, delete or restrict the use of your personal data, and to object to processing. Because the game has no accounts, the identifiers involved are device and installation IDs. To make a request, email <a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a>; we will respond within 30 days. You can also delete all local data at any time by uninstalling the game, and reset your advertising ID in your Android settings.</p>
+    <section id="rights">
+      <h2><span class="n">07</span>Your rights and deleting your data</h2>
+      <p>Depending on where you live (for example under the GDPR in Europe or the CCPA/CPRA in California), you may have the right to access, correct, delete or restrict the use of your personal data, and to object to processing. Because the game has no accounts, the identifiers involved are device and installation IDs.</p>
+      <p>To make a request, email <a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a>. We respond within 30 days. You can also delete all local data at any time by uninstalling the game, and reset your advertising ID in your Android settings.</p>
+    </section>
 
-<h2>8. Children</h2>
-<p>This game is not directed at children under 13 (or the minimum age in your country), and we do not knowingly collect personal information from them. If you believe a child has provided personal information through the game, email us and we will delete it.</p>
+    <section id="children">
+      <h2><span class="n">08</span>Children</h2>
+      <p>This game is not directed at children under 13 (or the minimum age in your country), and we do not knowingly collect personal information from them. If you believe a child has provided personal information through the game, email us and we will delete it.</p>
+    </section>
 
-<h2>9. Security</h2>
-<p>Data sent to Google services is encrypted in transit. We do not run our own servers that receive your gameplay or personal information.</p>
+    <section id="security">
+      <h2><span class="n">09</span>Security</h2>
+      <p>Data sent to Google services is encrypted in transit. We do not run our own servers that receive your gameplay or personal information.</p>
+    </section>
 
-<h2>10. About the game's content</h2>
-<p>Scamming Granny is satire. It does not teach, support or enable real fraud, and it never asks you for real codes, passwords or financial information. If someone contacts you in real life asking for a verification code, do not share it.</p>
+    <section id="content">
+      <h2><span class="n">10</span>About the game's content</h2>
+      <p>Scamming Granny is satire. Every company, person and verification code in it is fictional. It does not teach, support or enable real fraud, and it never asks you for real codes, passwords or financial information.</p>
+      <div class="note"><strong>Real-life tip:</strong> if anyone ever contacts you asking for a verification code, a password or a payment, do not share it. Real banks and governments never ask for these over the phone.</div>
+    </section>
 
-<h2>11. Changes to this policy</h2>
-<p>We may update this policy when the game changes. The effective date at the top shows when it was last updated. Significant changes will also be noted in the game's store listing.</p>
+    <section id="changes">
+      <h2><span class="n">11</span>Changes to this policy</h2>
+      <p>This page is rebuilt automatically from the game's code whenever the services or permissions it uses change. Effective date: 18 November 2026. Significant changes will also be noted in the game's store listing.</p>
+    </section>
 
-<h2>12. Contact</h2>
-<p>madaxe<br><a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a></p>
+    <section id="contact">
+      <h2><span class="n">12</span>Contact</h2>
+      <div class="contact">
+        <img src="assets/studio_logo.webp" alt="" width="72" height="72">
+        <div>
+          <p><strong>MadAxe Studios</strong><br>Developer: madaxe<br><a href="mailto:dhungel9814@gmail.com">dhungel9814@gmail.com</a></p>
+        </div>
+        <a class="btn" href="mailto:dhungel9814@gmail.com?subject=Scamming%20Granny%20privacy%20request">Email a privacy request</a>
+      </div>
+    </section>
+  </article>
+</div>
 
-<footer>&copy; 2026 madaxe. All rights reserved.</footer>
-</main>
+<footer>&copy; 2026 MadAxe Studios. Scamming Granny: Call Center Chaos is a work of parody.</footer>
 </body>
 </html>
